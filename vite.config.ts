@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react-swc'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import viteCompression from 'vite-plugin-compression'
@@ -21,5 +21,11 @@ export default defineConfig({
       algorithm: 'brotliCompress',
       ext: '.br'
     })
-  ]
+  ],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.ts',
+    css: true
+  }
 })
