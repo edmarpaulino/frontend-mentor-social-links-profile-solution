@@ -1,0 +1,16 @@
+@use 'variables';
+
+
+body {
+  background-color: variables.$grey-900;
+  color: variables.$white;
+  font-family: variables.$font-family;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+p {
+  font-size: variables.$font-size-paragraph;
+  font-weight: variables.$font-weight-regular;
+}

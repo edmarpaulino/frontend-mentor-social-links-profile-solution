@@ -1,0 +1,28 @@
+@use '../../styles/variables';
+
+.social-link {
+  display: block;
+  background-color: variables.$grey-700;
+  color: variables.$white;
+  font-weight: variables.$font-weight-semibold;
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 1rem;
+
+  &:hover,
+  &:focus-visible {
+    background-color: variables.$green;
+    color: variables.$grey-900;
+    outline: none; // Optional: remove default outline if custom style is clear
+  }
+
+  // Add a fallback for older browsers that don't support :focus-visible
+  &:focus {
+    background-color: variables.$green;
+    color: variables.$grey-900;
+    outline: none; // Optional: remove default outline if custom style is clear
+  }
+}

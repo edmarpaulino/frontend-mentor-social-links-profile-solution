@@ -1,0 +1,12 @@
+@use '../../styles/variables';
+
+.card {
+  background-color: variables.$grey-800;
+  color: variables.$white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 19rem; // Limits line length for readability (WCAG 1.4.8)
+  text-align: center;
+  min-width: 17rem; // Prevents the card from becoming too narrow
+}
